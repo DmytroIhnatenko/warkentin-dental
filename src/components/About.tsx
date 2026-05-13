@@ -23,7 +23,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="rounded-2xl overflow-hidden h-80 lg:h-[480px] shadow-xl"
+            className="relative rounded-2xl overflow-hidden h-80 lg:h-[480px] shadow-xl"
           >
             <Image
               src="/images/workspace.jpg"
@@ -96,7 +96,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="order-1 lg:order-2 rounded-2xl overflow-hidden h-80 lg:h-[480px] shadow-xl"
+            className="relative order-1 lg:order-2 rounded-2xl overflow-hidden h-80 lg:h-[480px] shadow-xl"
           >
             <Image
               src="/images/Orthodontic-Tools-For-Common-Bite-Problems-scaled.jpeg"
