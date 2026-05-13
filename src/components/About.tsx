@@ -16,21 +16,27 @@ export default function About() {
   return (
     <section id="ueber-uns" className="py-24 bg-azure">
       <div className="max-w-7xl mx-auto px-5 md:px-10 space-y-16 lg:space-y-24">
+
         {/* Block 1: Image left, text right */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+          {/* Motion wrapper is separate from the image container — transforms must not touch fill images */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative rounded-2xl overflow-hidden h-80 lg:h-[480px] shadow-xl"
           >
-            <Image
-              src="/images/workspace.jpg"
-              alt="Unser Labor"
-              fill
-              className="object-cover object-center"
-            />
+            <div className="relative rounded-2xl overflow-hidden min-h-[320px] lg:min-h-[480px] shadow-xl">
+              <Image
+                src="/images/workspace.jpg"
+                alt="Unser Labor"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-center"
+              />
+            </div>
           </motion.div>
 
           <motion.div
@@ -96,16 +102,21 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="relative order-1 lg:order-2 rounded-2xl overflow-hidden h-80 lg:h-[480px] shadow-xl"
+            className="order-1 lg:order-2"
           >
-            <Image
-              src="/images/Orthodontic-Tools-For-Common-Bite-Problems-scaled.jpeg"
-              alt="Zahnarzt Werkzeuge"
-              fill
-              className="object-cover object-center"
-            />
+            <div className="relative rounded-2xl overflow-hidden min-h-[320px] lg:min-h-[480px] shadow-xl">
+              <Image
+                src="/images/Orthodontic-Tools-For-Common-Bite-Problems-scaled.jpeg"
+                alt="Zahnarzt Werkzeuge"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover object-center"
+              />
+            </div>
           </motion.div>
         </div>
+
       </div>
     </section>
   );

@@ -136,6 +136,7 @@ export default function Contact() {
                 src="/images/workspace.jpg"
                 alt="Praxisstandort"
                 fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover opacity-60"
               />
               <div className="absolute inset-0 flex items-center justify-center">

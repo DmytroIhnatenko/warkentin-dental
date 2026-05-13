@@ -79,12 +79,14 @@ export default function Technology() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 rounded-2xl overflow-hidden h-64 sm:h-80 relative"
+          className="mt-16"
         >
+          <div className="relative rounded-2xl overflow-hidden min-h-[256px] sm:min-h-[320px]">
           <Image
             src="/images/dental-model.jpg"
             alt="Zahntechnisches Labor Warkentin"
             fill
+            sizes="(max-width: 1280px) 100vw, 1280px"
             className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/80 to-transparent flex items-center">
@@ -96,6 +98,7 @@ export default function Technology() {
                 Zahntechnik auf höchstem Niveau.
               </p>
             </div>
+          </div>
           </div>
         </motion.div>
       </div>

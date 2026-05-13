@@ -20,8 +20,9 @@ export default function Hero() {
           src="/images/workspace.jpg"
           alt="Modernes Meisterlabor Warkentin"
           fill
-          className="object-cover object-center"
           priority
+          sizes="100vw"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/20" />
       </div>
