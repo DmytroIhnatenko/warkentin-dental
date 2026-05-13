@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-navy: #002D5D;
+  --color-medical-blue: #0056B3;
+  --color-azure: #F0F4F8;
+  --color-white: #FFFFFF;
+  --color-slate: #1A1A1A;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-slate bg-white antialiased overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply px-5 md:px-10 lg:px-20;
+  }
+}
