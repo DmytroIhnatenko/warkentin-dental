@@ -74,12 +74,12 @@ export default function Technology() {
         </div>
 
         {/* Image strip — static container, no fill, no motion on image */}
-        <div className="mt-16 rounded-2xl overflow-hidden relative shadow-xl">
+        <div className="mt-16 max-w-3xl mx-auto rounded-2xl overflow-hidden relative shadow-xl">
           <Image
             src="/images/dental-model.jpg"
             alt="Zahntechnisches Labor Warkentin"
-            width={1280}
-            height={400}
+            width={900}
+            height={380}
             priority
             unoptimized
             style={{ width: "100%", height: "auto", objectFit: "cover", display: "block" }}

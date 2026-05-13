@@ -23,8 +23,8 @@ export default function About() {
           {/* Static image container — no motion, no fill, no transforms */}
           <div className="rounded-2xl overflow-hidden shadow-xl">
             <Image
-              src="/images/workspace.jpg"
-              alt="Unser Labor"
+              src="/images/dental-model.jpg"
+              alt="Zahntechnisches Meisterlabor"
               width={800}
               height={480}
               priority
