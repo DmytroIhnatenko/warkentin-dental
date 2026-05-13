@@ -73,21 +73,16 @@ export default function Technology() {
           ))}
         </div>
 
-        {/* Image strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16"
-        >
-          <div className="relative rounded-2xl overflow-hidden min-h-[256px] sm:min-h-[320px]">
+        {/* Image strip — static container, no fill, no motion on image */}
+        <div className="mt-16 rounded-2xl overflow-hidden relative shadow-xl">
           <Image
             src="/images/dental-model.jpg"
             alt="Zahntechnisches Labor Warkentin"
-            fill
-            sizes="(max-width: 1280px) 100vw, 1280px"
-            className="object-cover object-center"
+            width={1280}
+            height={400}
+            priority
+            unoptimized
+            style={{ width: "100%", height: "auto", objectFit: "cover", display: "block" }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/80 to-transparent flex items-center">
             <div className="px-5 sm:px-10">
@@ -99,8 +94,7 @@ export default function Technology() {
               </p>
             </div>
           </div>
-          </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
